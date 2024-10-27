@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  background: rgb(255, 255, 255);
+  font-family: "TTLakes", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+.header {
+  display: flex;
+  justify-content: start;
+  height: 116px;
+}
+.round-icon {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-size: cover;
+}
+.roind-icon--side-page-active {
+  background-image: url(../images/ic_burger_active.svg);
+  margin: 23px 16px 0 24px;
+}
+.header__logo-img {
+  margin: 18px 79px 0 0;
+}
+.roind-icon--search {
+  background-image: url(../images/ic_search.svg);
+  margin: 23px 24px 0 0;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0 0 24px;
+  gap: 32px;
+  font-size: 16px;
+}
+.navigation__elems::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-24px) translateY(-5px);
+  width: 4px;
+  height: 32px;
+  background: rgb(65, 246, 215);
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.navigation__elems:hover {
+  color: rgb(126, 126, 130);
+  transition-duration: 0.2s;
+}
+.navigation__elems:hover::before {
+  opacity: 1;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: 32px;
+  margin-left: 24px;
+}
+.icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.round-icon--call {
+  background-image: url(../images/ic_call.svg);
+}
+.round-icon--chat {
+  background-image: url(../images/ic_chat.svg);
+}
+.round-icon--profile {
+  background-image: url(../images/ic_profile.svg);
+}
+.email {
+  line-height: 24px;
+}
+.number {
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+.lang-switcher {
+  display: flex;
+  gap: 7px;
+}
+.lang-switcher__elem {
+  font-family: "TTLakes", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.lang-switcher__elem:hover {
+  color: rgb(126, 126, 130);
+}
