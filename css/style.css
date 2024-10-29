@@ -20,11 +20,19 @@ html {
   font-family: "TTLakes", sans-serif;
   font-weight: 500;
   margin: 0;
+  padding-left: 24px;
 }
 .header {
   display: flex;
-  justify-content: start;
-  height: 116px;
+  justify-content: space-between;
+  padding: 18px 24px 0 0;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 17px;
 }
 .round-icon {
   width: 40px;
@@ -33,24 +41,24 @@ html {
   border-radius: 20px;
   background-size: cover;
 }
-.roind-icon--side-page-active {
+.roind-icon--close {
   background-image: url(../images/ic_burger_active.svg);
-  margin: 23px 16px 0 24px;
 }
 .header__logo-img {
-  margin: 18px 79px 0 0;
+  align-self: center;
 }
 .roind-icon--search {
   background-image: url(../images/ic_search.svg);
-  margin: 23px 24px 0 0;
 }
 
 .navigation__list {
   display: flex;
   flex-direction: column;
-  padding: 4px 0 0 24px;
   gap: 32px;
   font-size: 16px;
+}
+.navigation__elems {
+  transition-duration: 0.4s;
 }
 .navigation__elems::before {
   content: "";
@@ -62,26 +70,30 @@ html {
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;
   opacity: 0;
-  transition-duration: 0.3s;
 }
 .navigation__elems:hover {
   color: rgb(126, 126, 130);
-  transition-duration: 0.2s;
 }
 .navigation__elems:hover::before {
   opacity: 1;
+  transition-duration: 0.5s;
 }
 .footer {
   display: flex;
   flex-direction: column;
   margin-top: auto;
   margin-bottom: 32px;
-  margin-left: 24px;
+  justify-content: space-around;
 }
-.icons {
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+.footer__icons {
   display: flex;
   gap: 16px;
-  margin-bottom: 16px;
 }
 .round-icon--call {
   background-image: url(../images/ic_call.svg);
@@ -98,8 +110,6 @@ html {
 .number {
   font-weight: bold;
   font-size: 24px;
-  margin-top: 12px;
-  margin-bottom: 40px;
 }
 .lang-switcher {
   display: flex;
@@ -110,6 +120,7 @@ html {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  transition-duration: 0.5s;
 }
 .lang-switcher__elem:hover {
   color: rgb(126, 126, 130);
